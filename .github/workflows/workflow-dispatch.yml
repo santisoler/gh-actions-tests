@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Use Python 3.14 for any other event different than the workflow_dispatch
-      PYTHON: ${{ inputs.python || "3.14" }}
+      PYTHON: ${{ inputs.python || '3.14' }}
 
     steps:
 
