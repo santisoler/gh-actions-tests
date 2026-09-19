@@ -2,6 +2,9 @@
 name: Test workflow_dispatch
 
 on:
+  # Trigger on pull requests
+  pull_request:
+
   # Manually triggered events
   workflow_dispatch:
     inputs:
@@ -20,7 +23,8 @@ jobs:
     name: Test workflow_dispatch
     runs-on: ubuntu-latest
     env:
-      PYTHON: ${{ inputs.python }}
+      # Use Python 3.14 for any other event different than the workflow_dispatch
+      PYTHON: ${{ inputs.python || '3.14' }}
 
     steps:
 
