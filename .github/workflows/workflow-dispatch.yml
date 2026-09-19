@@ -1,4 +1,5 @@
 # Test manually triggered workflows with 'workflow_dispatch' triggers
+name: Test workflow_dispatch
 
 on:
   # Manually triggered events
