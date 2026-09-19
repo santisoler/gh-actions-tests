@@ -24,7 +24,7 @@ jobs:
 
     steps:
 
-      - name: Check environment
+      - name: Print Python version
         run: |
           echo "Python version:" ${PYTHON}
 
