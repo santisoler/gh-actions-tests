@@ -1,0 +1,29 @@
+# Test manually triggered workflows with 'workflow_dispatch' triggers
+
+on:
+  # Manually triggered events
+  workflow_dispatch:
+    inputs:
+      python:
+        description: "Python version"
+        required: true
+        default: "3.14"
+        type: string
+
+permissions: {}
+
+jobs:
+
+
+  test-workflow-dispatch:
+    name: Test workflow_dispatch
+    runs-on: ubuntu-latest
+    env:
+      PYTHON: ${{ inputs.python }}
+
+    steps:
+
+      - name: Check environment
+        run: |
+          echo "Python version:" ${PYTHON}
+
