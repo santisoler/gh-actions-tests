@@ -2,6 +2,9 @@
 name: Test workflow_dispatch
 
 on:
+  # Trigger on pull requests
+  pull_request:
+
   # Manually triggered events
   workflow_dispatch:
     inputs:
